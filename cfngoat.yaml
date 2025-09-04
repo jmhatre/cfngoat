@@ -59,6 +59,8 @@ Resources:
           Value: "2021-08-23 13:51:41"
         - Key: git_last_modified_by
           Value: nimrodkor@gmail.com
+        - Key: user
+          Value: pchandaliya
       UserData:
         Fn::Base64: |
           #!/bin/bash
@@ -99,6 +101,8 @@ Resources:
           Value: jonathan.jozwiak/nimrodkor
         - Key: git_last_modified_at
           Value: "2021-08-23 13:51:41"
+        - Key: user
+          Value: pchandaliya
       Encrypted: True
 
   ### CFN Does not Support Volume Snapshot
@@ -146,6 +150,8 @@ Resources:
           Value: d4d72008-2b73-4635-9df6-8035c8850d66
         - Key: git_org
           Value: bridgecrewio
+        - Key: user
+          Value: pchandaliya
   WebVPC:
     Type: AWS::EC2::VPC
     Properties:
@@ -171,6 +177,8 @@ Resources:
           Value: jonathan.jozwiak@googlemail.com
         - Key: yor_trace
           Value: eeb90d09-d35e-440f-ac67-2f96e472b2e0
+        - Key: user
+          Value: pchandaliya
   WebSubnet:
     Type: AWS::EC2::Subnet
     Properties:
@@ -200,6 +208,8 @@ Resources:
           Value: "2021-08-23 13:51:41"
         - Key: git_last_modified_by
           Value: nimrodkor@gmail.com
+        - Key: user
+          Value: pchandaliya
   WebSubnet2:
     Type: AWS::EC2::Subnet
     Properties:
@@ -229,6 +239,8 @@ Resources:
           Value: cfngoat.yaml
         - Key: git_commit
           Value: 42153ba22c28f5c0bff388b24a6344137a5dfe26
+        - Key: user
+          Value: pchandaliya
   WebIGW:
     Type: AWS::EC2::InternetGateway
     Properties:
@@ -251,6 +263,8 @@ Resources:
           Value: "2020-04-25 01:13:26"
         - Key: git_last_modified_by
           Value: jonathan.jozwiak@googlemail.com
+        - Key: user
+          Value: pchandaliya
   InternetGatewayAttachment:
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
@@ -279,6 +293,8 @@ Resources:
           Value: cfngoat
         - Key: git_file
           Value: cfngoat.yaml
+        - Key: user
+          Value: pchandaliya
   WebDefaultPublicRoute:
     Type: AWS::EC2::Route
     DependsOn:
@@ -322,6 +338,8 @@ Resources:
           Value: jonathan.jozwiak
         - Key: git_last_modified_at
           Value: "2020-04-25 01:13:26"
+        - Key: user
+          Value: pchandaliya
   VpcFlowLogs:
     Type: AWS::EC2::FlowLog
     Properties:
@@ -347,6 +365,8 @@ Resources:
           Value: b1681f3806db6656faf4107ceceb77e9364e59b7
         - Key: git_modifiers
           Value: jonathan.jozwiak
+        - Key: user
+          Value: pchandaliya
   FlowBucket:
     Type: AWS::S3::Bucket
     DeletionPolicy: Delete
@@ -371,6 +391,8 @@ Resources:
           Value: "2021-08-23 13:51:41"
         - Key: git_last_modified_by
           Value: nimrodkor@gmail.com
+        - Key: user
+          Value: pchandaliya
 
   #############
   ###  IAM  ###
@@ -400,6 +422,8 @@ Resources:
           Value: 42153ba22c28f5c0bff388b24a6344137a5dfe26
         - Key: git_modifiers
           Value: jonathan.jozwiak/nimrodkor
+        - Key: user
+          Value: pchandaliya
   AccessKey:
     Type: AWS::IAM::AccessKey
     Properties:
@@ -457,6 +481,8 @@ Resources:
           Value: cfngoat.yaml
         - Key: git_commit
           Value: 42153ba22c28f5c0bff388b24a6344137a5dfe26
+        - Key: user
+          Value: pchandaliya
   LogsKeyAlias:
     Type: AWS::KMS::Alias
     Properties:
@@ -510,6 +536,8 @@ Resources:
           Value: nimrodkor@gmail.com
         - Key: yor_trace
           Value: ca176a04-46cc-411d-a062-222ae03835a8
+        - Key: user
+          Value: pchandaliya
   DefaultDBOptionGroup:
     Type: AWS::RDS::OptionGroup
     Properties:
@@ -538,6 +566,8 @@ Resources:
           Value: jonathan.jozwiak/nimrodkor
         - Key: git_last_modified_at
           Value: "2021-08-23 13:51:41"
+        - Key: user
+          Value: pchandaliya
   DefaultDBParameterGroup:
     Type: AWS::RDS::DBParameterGroup
     Properties:
@@ -567,6 +597,8 @@ Resources:
           Value: cfngoat.yaml
         - Key: git_commit
           Value: 42153ba22c28f5c0bff388b24a6344137a5dfe26
+        - Key: user
+          Value: pchandaliya
   DefaultSubnetGroup:
     Type: AWS::RDS::DBSubnetGroup
     Properties:
@@ -596,6 +628,8 @@ Resources:
           Value: bridgecrewio
         - Key: git_repo
           Value: cfngoat
+        - Key: user
+          Value: pchandaliya
   DefaultSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -628,6 +662,8 @@ Resources:
           Value: jonathan.jozwiak@googlemail.com
         - Key: yor_trace
           Value: 3d3b2421-0886-4ab8-88ec-e4bef646fdf6
+        - Key: user
+          Value: pchandaliya
   EC2Profile:
     Type: AWS::IAM::InstanceProfile
     Properties:
@@ -671,6 +707,8 @@ Resources:
           Value: bridgecrewio
         - Key: git_repo
           Value: cfngoat
+        - Key: user
+          Value: pchandaliya
   EC2Policy:
     Type: AWS::IAM::Policy
     Properties:
@@ -720,6 +758,8 @@ Resources:
           Value: bridgecrewio
         - Key: git_repo
           Value: cfngoat
+        - Key: user
+          Value: pchandaliya
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash
@@ -876,6 +916,8 @@ Resources:
           Value: 42153ba22c28f5c0bff388b24a6344137a5dfe26
         - Key: git_modifiers
           Value: jonathan.jozwiak/nimrodkor
+        - Key: user
+          Value: pchandaliya
   AnalysisLambda:
     Type: AWS::Lambda::Function
     Properties:
@@ -911,6 +953,8 @@ Resources:
           Value: jonathan.jozwiak/nimrodkor
         - Key: git_last_modified_at
           Value: "2021-08-23 13:51:41"
+        - Key: user
+          Value: pchandaliya
 
   ############
   ###  S3  ###
@@ -941,6 +985,8 @@ Resources:
           Value: 509b197d-4f87-4ae1-aa43-8cca13c9e92e
         - Key: git_org
           Value: bridgecrewio
+        - Key: user
+          Value: pchandaliya
 
   ### TODO - Custom Upload of insecure document
   FinancialsBucket:
@@ -969,6 +1015,8 @@ Resources:
           Value: bridgecrewio
         - Key: git_repo
           Value: cfngoat
+        - Key: user
+          Value: pchandaliya
   OperationsBucket:
     # not encrypted, no access logs
     Type: AWS::S3::Bucket
@@ -997,6 +1045,8 @@ Resources:
           Value: jonathan.jozwiak@googlemail.com
         - Key: yor_trace
           Value: 9e00e7c2-b27c-4141-af5a-2d90c9632a23
+        - Key: user
+          Value: pchandaliya
   DataScienceBucket:
     # not encrypted
     Type: AWS::S3::Bucket
@@ -1028,6 +1078,8 @@ Resources:
           Value: 11266986-850e-41eb-b980-7b4d8d49f919
         - Key: git_org
           Value: bridgecrewio
+        - Key: user
+          Value: pchandaliya
   LogsBucket:
     # not encrypted
     Type: AWS::S3::Bucket
@@ -1061,6 +1113,8 @@ Resources:
           Value: "2021-08-23 13:51:41"
         - Key: git_last_modified_by
           Value: nimrodkor@gmail.com
+        - Key: user
+          Value: pchandaliya
 
    ########################
    ### Clean S3 Buckets ###
@@ -1113,6 +1167,8 @@ Resources:
           Value: bridgecrewio
         - Key: git_repo
           Value: cfngoat
+        - Key: user
+          Value: pchandaliya
   CleanBucketFunction:
     Type: "AWS::Lambda::Function"
     DependsOn:
@@ -1267,6 +1323,8 @@ Resources:
           Value: cfngoat
         - Key: git_file
           Value: cfngoat.yaml
+        - Key: user
+          Value: pchandaliya
   CleanFlowBucketOnDelete:
     Type: Custom::cleanupflowbucket
     Properties:
